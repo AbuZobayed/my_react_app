@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import SingleProducts from "../components/SingleProducts";
+import SingleProductCardDashboard from "../components/dashboard/SingleProductCardDashboard";
 
 export default function AllProducts() {
     const [products, setProducts] = useState([])
@@ -15,7 +15,7 @@ export default function AllProducts() {
       <div className="my-16 flex flex-wrap  gap-4">
         {
             products.map((shoe) => 
-            <SingleProducts key={shoe.id} shoe={shoe} />
+            <SingleProductCardDashboard key={shoe.id} shoe={shoe} />
             
             )
         }

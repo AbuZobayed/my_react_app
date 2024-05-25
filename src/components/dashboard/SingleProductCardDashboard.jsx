@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 const SingleProductCardDashboard = ({ shoe, onDelete }) => {
   const { id, title, brand, price, description, image_url } = shoe;
 
+
+
   const handleDelete = async () => {
     await fetch(`http://localhost:3000/shoes/${id}`, {
       method: "DELETE",
@@ -37,8 +39,27 @@ const SingleProductCardDashboard = ({ shoe, onDelete }) => {
             Delete
           </button>
         </div>
-      </div>
+      </div> 
     </div>
+
+    // my work 
+    // <div className="card lg:card-side bg-base-100 shadow-xl">
+    //   <figure>
+    //     <img
+    //       src={image_url}
+    //       alt="Album"
+    //     />
+    //   </figure>
+    //   <div className="card-body">
+    //     <h1>{brand}</h1>
+    //     <h2 className="card-title">{title}</h2>
+    //     <p>{price}</p>
+    //     <p>{description}</p>
+    //     <div className="card-actions justify-end">
+    //       <button className="btn btn-primary">Listen</button>
+    //     </div>
+    //   </div>
+    // </div>
   );
 };
 
