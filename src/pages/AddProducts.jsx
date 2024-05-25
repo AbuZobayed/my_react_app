@@ -1,21 +1,29 @@
 export default function AddProducts() {
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const form = e.target; 
-    const id = form.id.value ;
+    const form = e.target;
+    const id = form.id.value;
     const title = form.title.value;
     const brand = form.brand.value;
     const price = form.price.value;
     const dscription = form.dscription.value;
     const image_url = form.image_url.value;
 
-    const data = {image_url,title,brand,price,dscription,id};
+    const data = { image_url, title, brand, price, dscription, id };
 
-    console.log(data); 
+    
 
-  }
+    await fetch("http://localhost:3000/shoes", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  };
   return (
     <div>
       <h1 className="text-5xl font-bold text-center">Add a Product</h1>
@@ -71,7 +79,11 @@ export default function AddProducts() {
             />
           </div>
           <div className="mt-2 flex justify-center items-center ">
-            <input className="btn mt-4 text-white  p-4 bg-indigo-600" type="submit" value="Add Product" />
+            <input
+              className="btn mt-4 text-white  p-4 bg-indigo-600"
+              type="submit"
+              value="Add Product"
+            />
           </div>
         </form>
       </div>
