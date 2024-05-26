@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 .bannerBg{
-    background-image: url("/public/banner.jpeg");
+    background-image: url("/public/shoeOffer.png");
     object-fit: cover;
 }
