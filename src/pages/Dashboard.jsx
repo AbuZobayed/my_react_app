@@ -15,9 +15,9 @@ const Dashboard = () => {
                   <input type="checkbox" className="checkbox" />
                 </label>
               </th>
-              <th>Name</th>
-              <th>Address</th>
-              <th>Favorite shoe</th>
+              <th className="text-violet-600 font-bold text-lg">User</th>
+              <th className="text-violet-600 font-bold text-lg">Address</th>
+              <th className="text-violet-600 font-bold text-lg">Favorite shoe</th>
               <th></th>
             </tr>
           </thead>
@@ -26,7 +26,7 @@ const Dashboard = () => {
             <tr>
               <th>
                 <label>
-                  <input type="checkbox" className="checkbox" />
+                  <input type="checkbox" className="checkbox " />
                 </label>
               </th>
               <td>
