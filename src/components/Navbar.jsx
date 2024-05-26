@@ -5,7 +5,8 @@ const Navbar = () => {
   const { logout, user } = useAuth();
 
   const handleLogout = async () => {
-    await logout();
+    alert("LogOut successfully")
+   await logout();
   };
 
   return (
