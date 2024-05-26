@@ -1,6 +1,11 @@
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 export default function AddProducts() {
   const handleSubmit = async (e) => {
     e.preventDefault();
+    toast("Product Add Successfully");
+  
 
     const form = e.target;
     const id = form.id.value;
@@ -87,6 +92,7 @@ export default function AddProducts() {
               type="submit"
               value="Add Product"
             />
+            <ToastContainer/>
           </div>
         </form>
       </div>

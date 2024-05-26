@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import SingleProductCardDashboard from "../components/dashboard/SingleProductCardDashboard";
 
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 export default function AllProducts() {
     const [products, setProducts] = useState([])
 
@@ -12,6 +15,8 @@ export default function AllProducts() {
 
     const handleDeleteProduct = (id) =>{
       setProducts(products.filter((product) => product.id !== id));
+      toast("Product delete Successfully");
+      
     };
 
   return (
@@ -22,8 +27,11 @@ export default function AllProducts() {
             products.map((shoe) => 
             <SingleProductCardDashboard key={shoe.id} shoe={shoe} onDelete={handleDeleteProduct} />
             
+      
             )
+            
         }
+        <ToastContainer/>
       </div>
     </div>
   );
