@@ -5,7 +5,7 @@ const Products = ({ data }) => {
   // console.log(data);
   return (
     <div>
-      <h1 className="my-8 text-2xl font-bold text-center">Our Products</h1>
+      <h1 className="my-8 text-2xl text-violet-600 font-bold text-center">Our Products</h1>
       <div className="flex justify-center gap-4">
         {data.slice(0, 3).map((shoe) => (
           <SingleProducts key={shoe.id} shoe={shoe} />

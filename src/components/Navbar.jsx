@@ -104,7 +104,7 @@ const Navbar = () => {
           </button>
         )}
         <div className="avatar">
-          <div className="w-12 rounded-full border-2 border-black">
+          <div className="w-12 rounded-full border-2 border-violet">
             <img src={user?.photoURL || "/public/placeholder.jpg"} />
           </div>
         </div>
