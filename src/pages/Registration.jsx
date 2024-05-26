@@ -37,7 +37,7 @@ const Registration = () => {
     <form onSubmit={handleSUbmit} className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Register now!</h1>
+          <h1 className="text-5xl font-bold text-violet-600">Register now!</h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
@@ -89,7 +89,7 @@ const Registration = () => {
             )}
             <div className="form-control mt-6">
               <input
-                className="btn bg-red-500 text-white"
+                className="btn bg-violet-600 text-white"
                 type="submit"
                 value="Register"
               />
@@ -100,7 +100,7 @@ const Registration = () => {
             <div className="mt-6">
               <p>
                 Already have an account?{" "}
-                <Link to="/login" className="text-red-500">
+                <Link to="/login" className="text-violet-600">
                   Login
                 </Link>
               </p>

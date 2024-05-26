@@ -48,22 +48,6 @@
       "price": 155,
       "description": "Converse Chuck Taylor All Star sneakers are an all-time classic, offering a durable canvas upper and the iconic rubber toe cap.",
       "image_url": "/src/assets/img/shoe-7.jpg"
-    },
-    {
-      "id": "7",
-      "image_url": "https://m.media-amazon.com/images/I/71ScZeU-QTL._SY695_.jpg",
-      "title": "SESS BLACK",
-      "brand": "Apex",
-      "price": "66",
-      "dscription": "SESS BLACK-142 MEN/BOYS SPORT SHEO"
-    },
-    {
-      "id": "8",
-      "image_url": "https://m.media-amazon.com/images/I/71ScZeU-QTL._SY695_.jpg",
-      "title": "SESS BLACK-142",
-      "brand": "Apex",
-      "price": "667",
-      "dscription": "SESS BLACK-142 MEN/BOYS SPORT SHEO"
     }
   ]
 }

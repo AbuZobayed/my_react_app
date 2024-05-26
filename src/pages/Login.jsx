@@ -29,10 +29,10 @@ const Login = () => {
   }, [user, from, navigate]);
 
   return (
-    <form onSubmit={handleSUbmit} className="hero min-h-screen bg-base-200">
+    <form onSubmit={handleSUbmit} className="hero min-h-screen  bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Login now!</h1>
+          <h1 className="text-5xl font-bold text-violet-600">Login now!</h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
@@ -68,7 +68,7 @@ const Login = () => {
 
             <div className="form-control mt-6">
               <input
-                className="btn bg-red-500 text-white"
+                className="btn bg-violet-600 text-white"
                 type="submit"
                 value="Login"
               />
@@ -79,7 +79,7 @@ const Login = () => {
             <div className="mt-6">
               <p>
                 New here?{" "}
-                <Link to="/register" className="text-red-500">
+                <Link to="/register" className="text-violet-600">
                   Register
                 </Link>
               </p>
