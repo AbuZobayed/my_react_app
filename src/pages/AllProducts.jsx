@@ -21,7 +21,7 @@ export default function AllProducts() {
 
   return (
     <div>
-      <h1 className="text-5xl font-bold text-center">All Products</h1>
+      <h1 className="text-5xl font-bold text-violet-600 text-center">All Products</h1>
       <div className="my-16 flex flex-wrap  gap-4">
         {
             products.map((shoe) => 

@@ -34,7 +34,7 @@ export default function AddProducts() {
   };
   return (
     <div>
-      <h1 className="text-5xl font-bold text-center">Add a Product</h1>
+      <h1 className="text-5xl font-bold text-violet-600 text-center">Add a Product</h1>
 
       <div className="my-16">
         <form onSubmit={handleSubmit}>

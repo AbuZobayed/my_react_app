@@ -24,18 +24,20 @@ const SingleProductCardDashboard = ({ shoe, onDelete }) => {
         <img src={image_url} alt="Shoes" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{title}</h2>
+        <h2 className="card-title uppercase">{title}</h2>
+        <p>{description}</p>
         <h3 className="text-xl font-semibold">{brand}</h3>
         <h3 className="text-xl font-semibold">{price}</h3>
-        <p>{description}</p>
-        <div className="card-actions justify-end">
-          <button className="btn bg-indigo-500 text-white">
-            <Link to={`/products/${id}`}>See details</Link>
-          </button>
-          <button className="btn bg-green-600 text-white">
+        
+        <div className="card-actions justify-center gap-4">
+         
+          <button className="btn bg-green-500 text-white">
             <Link to={`edit/${id}`}>Edit</Link>
           </button>
-          <button onClick={handleDelete} className="btn bg-red-500 text-white">
+          <button className="btn bg-violet-600 text-white">
+            <Link to={`/products/${id}`}>See details</Link>
+          </button>
+          <button onClick={handleDelete} className="btn bg-red-400 text-white">
             Delete
           </button>
         </div>
