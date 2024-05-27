@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 export default function EditProducts() {
   const shoe = useLoaderData();
 
@@ -14,7 +17,10 @@ export default function EditProducts() {
   console.log(shoe);
 
   const handleSubmit = async (e) => {
+    
     e.preventDefault();
+    toast("Product Update Successfully");
+    
 
     const form = e.target;
     const id = form.id.value;
@@ -34,7 +40,10 @@ export default function EditProducts() {
       body: JSON.stringify(data),
     })
        .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => console.log(data)
+  
+    );
+      
   };
   return (
     <div>
@@ -108,6 +117,7 @@ export default function EditProducts() {
               type="submit"
               value="Update Product"
             />
+             <ToastContainer/>
           </div>
         </form>
       </div>
