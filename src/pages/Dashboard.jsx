@@ -1,4 +1,17 @@
+import useAuth from "../hooks/useAuth";
+
 const Dashboard = () => {
+  const { user } = useAuth();
+
+  console.log(user);
+  console.log(user.photoUrl);
+  console.log(user.metadata?.creationTime);
+
+  const userName = user?.displayName;
+  const photoURL = user?.photoURL;
+  const email = user?.email;
+  const creationTime = user?.metadata?.creationTime;
+
   return (
     <div className="container  mx-auto">
       <h1 className="ms-64 mb-8 text-5xl font-bold text-violet-600">
@@ -10,55 +23,47 @@ const Dashboard = () => {
           {/* head */}
           <thead>
             <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
+              
               <th className="text-violet-600 font-bold text-lg">User</th>
-              <th className="text-violet-600 font-bold text-lg">Address</th>
-              <th className="text-violet-600 font-bold text-lg">Favorite shoe</th>
+              <th className="text-violet-600 font-bold text-lg">
+                {" "}
+                Email Address
+              </th>
+              <th className="text-violet-600 font-bold text-lg">
+                User CreationTime
+              </th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             {/* row 1 */}
             <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox " />
-                </label>
-              </th>
+              
               <td>
                 <div className="flex items-center gap-3">
                   <div className="avatar">
                     <div className="mask mask-squircle w-12 h-12">
-                      <img
-                        src="https://img.daisyui.com/tailwind-css-component-profile-2@56w.png"
-                        alt="Avatar Tailwind CSS Component"
-                      />
+                      <img src={photoURL} />
                     </div>
                   </div>
                   <div>
-                    <div className="font-bold">Hart Hagerty</div>
-                    <div className="text-sm opacity-50">United States</div>
+                    <div className="font-bold">{userName}</div>
+                    
                   </div>
                 </div>
               </td>
               <td>
-                Zemlak, Daniel and Leannon
+                {email}
                 <br />
-                <span className="badge badge-ghost badge-sm">
-                  Desktop Support Technician
-                </span>
+                
               </td>
-              <td>Boat shoes</td>
+              <td>{creationTime}</td>
               <th>
-                <button className="btn btn-ghost bg-violet-500 text-white btn-xs">details</button>
+                
               </th>
             </tr>
             {/* row 2 */}
-            <tr>
+            {/* <tr>
               <th>
                 <label>
                   <input type="checkbox" className="checkbox" />
@@ -91,9 +96,9 @@ const Dashboard = () => {
               <th>
                 <button className="btn btn-ghost bg-violet-500 text-white btn-xs">details</button>
               </th>
-            </tr>
+            </tr> */}
             {/* row 3 */}
-            <tr>
+            {/* <tr>
               <th>
                 <label>
                   <input type="checkbox" className="checkbox" />
@@ -126,155 +131,15 @@ const Dashboard = () => {
               <th>
                 <button className="btn btn-ghost bg-violet-500 text-white btn-xs">details</button>
               </th>
-            </tr>
-            {/* row 4 */}
-            <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
-              <td>
-                <div className="flex items-center gap-3">
-                  <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12">
-                      <img
-                        src="/src/assets/img/user-3.jpg"
-                        alt="Avatar Tailwind CSS Component"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <div className="font-bold">Yancy Tear</div>
-                    <div className="text-sm opacity-50">Brazil</div>
-                  </div>
-                </div>
-              </td>
-              <td>
-                Wyman-Ledner
-                <br />
-                <span className="badge badge-ghost badge-sm">
-                  Community Outreach Specialist
-                </span>
-              </td>
-              <td>
-Loafer</td>
-              <th>
-                <button className="btn btn-ghost bg-violet-500 text-white btn-xs">details</button>
-              </th>
-            </tr>
-            <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
-              <td>
-                <div className="flex items-center gap-3">
-                  <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12">
-                      <img
-                        src="/src/assets/img/user-4.jpg"
-                        alt="Avatar Tailwind CSS Component"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <div className="font-bold">Yancy Tear</div>
-                    <div className="text-sm opacity-50">Brazil</div>
-                  </div>
-                </div>
-              </td>
-              <td>
-                Wyman-Ledner
-                <br />
-                <span className="badge badge-ghost badge-sm">
-                  Community Outreach Specialist
-                </span>
-              </td>
-              <td>
-Loafer</td>
-              <th>
-                <button className="btn btn-ghost bg-violet-500 text-white btn-xs">details</button>
-              </th>
-            </tr>
-            <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
-              <td>
-                <div className="flex items-center gap-3">
-                  <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12">
-                      <img
-                        src="/src/assets/img/user-5.jpg"
-                        alt="Avatar Tailwind CSS Component"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <div className="font-bold">Yancy Tear</div>
-                    <div className="text-sm opacity-50">Brazil</div>
-                  </div>
-                </div>
-              </td>
-              <td>
-                Wyman-Ledner
-                <br />
-                <span className="badge badge-ghost badge-sm">
-                  Community Outreach Specialist
-                </span>
-              </td>
-              <td>
-Loafer</td>
-              <th>
-                <button className="btn btn-ghost bg-violet-500 text-white btn-xs">details</button>
-              </th>
-            </tr>
-            <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
-              <td>
-                <div className="flex items-center gap-3">
-                  <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12">
-                      <img
-                        src="/src/assets/img/user6.jpg"
-                        alt="Avatar Tailwind CSS Component"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <div className="font-bold">Yancy Tear</div>
-                    <div className="text-sm opacity-50">Brazil</div>
-                  </div>
-                </div>
-              </td>
-              <td>
-                Wyman-Ledner
-                <br />
-                <span className="badge badge-ghost badge-sm">
-                  Community Outreach Specialist
-                </span>
-              </td>
-              <td>
-Loafer</td>
-              <th>
-                <button className="btn btn-ghost bg-violet-500 text-white btn-xs">details</button>
-              </th>
-            </tr>
+            </tr> */}
           </tbody>
           {/* foot */}
-          
         </table>
       </div>
 
-      <div className="ms-72 mt-10">
+      {/* anther section  */}
+
+      {/* <div className="ms-72 mt-10">
       <div className="stats w-auto  shadow">
         <div className="stat ">
           <div className="stat-title">Total Sales</div>
@@ -303,7 +168,7 @@ Loafer</td>
           <div className="stat-desc text-secondary">30 days remaining</div>
         </div>
       </div>
-      </div>
+      </div> */}
     </div>
   );
 };

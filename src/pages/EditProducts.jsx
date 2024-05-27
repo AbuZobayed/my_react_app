@@ -27,10 +27,10 @@ export default function EditProducts() {
     const title = form.title.value;
     const brand = form.brand.value;
     const price = form.price.value;
-    const dscription = form.dscription.value;
+    const description = form.dscription.value;
     const image_url = form.image_url.value;
 
-    const data = { image_url, title, brand, price, dscription, id };
+    const data = { image_url, title, brand, price, description, id };
 
     await fetch(`http://localhost:3000/shoes/${shoe.id}`, {
       method: "PATCH",
@@ -40,8 +40,11 @@ export default function EditProducts() {
       body: JSON.stringify(data),
     })
        .then((res) => res.json())
-      .then((data) => console.log(data)
-  
+      .then((data) =>  {
+        console.log(data)
+        form.reset();
+      }
+        
     );
       
   };
