@@ -1,11 +1,10 @@
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function AddProducts() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     toast("Product Add Successfully");
-  
 
     const form = e.target;
     const id = form.id.value;
@@ -17,8 +16,6 @@ export default function AddProducts() {
 
     const data = { image_url, title, brand, price, dscription, id };
 
-    
-
     await fetch("http://localhost:3000/shoes", {
       method: "POST",
       headers: {
@@ -28,8 +25,8 @@ export default function AddProducts() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
-        form.reset(); 
+        console.log(data);
+        form.reset();
       });
   };
   return (
@@ -97,5 +94,6 @@ export default function AddProducts() {
         </form>
       </div>
     </div>
+   
   );
 }

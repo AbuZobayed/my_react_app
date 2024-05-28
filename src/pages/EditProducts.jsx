@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
-
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function EditProducts() {
   const shoe = useLoaderData();
@@ -14,23 +13,23 @@ export default function EditProducts() {
   const [description, setDescription] = useState(shoe.description);
   const [image_url, setImageURL] = useState(shoe.image_url);
 
-  console.log(shoe);
+  // console.log(shoe);
 
   const handleSubmit = async (e) => {
-    
     e.preventDefault();
     toast("Product Update Successfully");
-    
 
     const form = e.target;
     const id = form.id.value;
     const title = form.title.value;
     const brand = form.brand.value;
     const price = form.price.value;
-    const description = form.dscription.value;
+    const description = form.description.value;
     const image_url = form.image_url.value;
 
     const data = { image_url, title, brand, price, description, id };
+
+    console.log(data);
 
     await fetch(`http://localhost:3000/shoes/${shoe.id}`, {
       method: "PATCH",
@@ -39,14 +38,10 @@ export default function EditProducts() {
       },
       body: JSON.stringify(data),
     })
-       .then((res) => res.json())
-      .then((data) =>  {
-        console.log(data)
-        form.reset();
-      }
-        
-    );
-      
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
   return (
     <div>
@@ -88,7 +83,7 @@ export default function EditProducts() {
             <input
               className="bg-gray-100 p-4 w-full border rounded-lg border-indigo-600 "
               type="text"
-              name="dscription"
+              name="description"
               placeholder="Dscription"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
@@ -120,7 +115,7 @@ export default function EditProducts() {
               type="submit"
               value="Update Product"
             />
-             <ToastContainer/>
+            <ToastContainer />
           </div>
         </form>
       </div>

@@ -101,7 +101,7 @@ const Navbar = () => {
             onClick={handleLogout}
             className="btn bg-violet-500  text-white hidden lg:block"
           >
-            Logout
+          Logout
           </button>
         )}
         <div className="avatar">

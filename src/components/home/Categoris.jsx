@@ -4,7 +4,7 @@ export default function Categoris() {
       <h1 className="mt-12 text-center text-3xl font-bold ">
         Our Top Categories
       </h1>
-      <div className="flex justify-center mt-4 gap-5 ">
+      <div className="flex justify-center mt-6 gap-5 ">
         <div className="card w-96 bg-base-100 border-violet-300 border-4 shadow-xl">
           <div className="card-body">
             <div className="flex flex-wrap justify-center">

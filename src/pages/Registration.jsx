@@ -25,7 +25,7 @@ const Registration = () => {
 
     console.log(email, password, confirm_password);
 
-    if (password === confirm_password) {
+    if (password ===  confirm_password) {
       createUser(email, password);
       if (user) {
         navigate(from);
@@ -100,7 +100,7 @@ const Registration = () => {
             <div className="mt-6">
               <p>
                 Already have an account?{" "}
-                <Link to="/login" className="text-violet-600">
+                <Link to="/login" className="text-violet-600 ">
                   Login
                 </Link>
               </p>

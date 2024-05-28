@@ -33,7 +33,7 @@
 //     return signOut(auth).then(()=> setUser(null));
 //   };
 
-//   const googleLogin = () => {
+//   const googleLogin = () => {  
 //     return signInWithPopup(auth, googleProvider);
 //   };
 
@@ -105,7 +105,7 @@ import {
         if (currentUser) {
           setUser(currentUser);
           setLoading(false);
-          console.log(currentUser);
+          // console.log(currentUser);
         } else {
           setLoading(false);
         }

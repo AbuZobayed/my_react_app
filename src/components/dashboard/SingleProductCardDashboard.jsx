@@ -24,10 +24,10 @@ const SingleProductCardDashboard = ({ shoe, onDelete }) => {
         <img src={image_url} alt="Shoes" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title uppercase">{title}</h2>
+        <h2 className="card-title uppercase text-violet-600 font-semibold">{title}</h2>
         <p>{description}</p>
         <h3 className="text-xl font-semibold">{brand}</h3>
-        <h3 className="text-xl font-semibold">{price}</h3>
+        <h3 className="text-xl font-semibold text-violet-600 ">${price}</h3>
         
         <div className="card-actions justify-center gap-4">
          
